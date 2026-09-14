@@ -1,11 +1,12 @@
-<% content_for :title, "New book" %>
+<% content_for :title, "Add a Book" %>
 
-<h1>New book</h1>
+<h1>Add a Book</h1>
+<p class="subtitle">Enter the title of the book you want to add.</p>
 
-<%= render "form", book: @book %>
+<div class="form-card">
+  <%= render "form", book: @book %>
+</div>
 
-<br>
-
-<div>
-  <%= link_to "Back to books", books_path %>
+<div class="page-links">
+  <%= link_to "Back to Home", root_path %>
 </div>
