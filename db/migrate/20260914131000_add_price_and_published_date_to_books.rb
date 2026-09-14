@@ -1,0 +1,6 @@
+class AddPriceAndPublishedDateToBooks < ActiveRecord::Migration[8.0]
+  def change
+    add_column :books, :price, :decimal, precision: 8, scale: 2
+    add_column :books, :published_date, :date
+  end
+end

@@ -57,6 +57,14 @@ a {
   color: #24613a;
 }
 
+.alert {
+  padding: 12px 16px;
+  border: 1px solid #e2aaaa;
+  border-radius: 6px;
+  background: #fff1f1;
+  color: #8f2929;
+}
+
 .book-card,
 .form-card,
 .detail-card,
@@ -78,9 +86,13 @@ a {
 }
 
 .book-title {
-  margin: 4px 0 0;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.book-detail {
+  min-height: 24px;
+  margin: 4px 0 16px;
 }
 
 .book-actions {
@@ -128,13 +140,28 @@ a {
   font-weight: bold;
 }
 
-.form-field input[type="text"] {
+.form-field input[type="text"],
+.form-field input[type="number"],
+.date-selects select {
   box-sizing: border-box;
-  width: 100%;
   padding: 10px;
   border: 1px solid #b9c0ca;
   border-radius: 5px;
   font: inherit;
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"] {
+  width: 100%;
+}
+
+.date-selects {
+  display: flex;
+  gap: 8px;
+}
+
+.form-field + .form-field {
+  margin-top: 16px;
 }
 
 .form-actions {

@@ -1,7 +1,11 @@
 <% content_for :title, "Add a Book" %>
 
 <h1>Add a Book</h1>
-<p class="subtitle">Enter the title of the book you want to add.</p>
+<p class="subtitle">Enter the information for the book you want to add.</p>
+
+<% if alert.present? %>
+  <p class="alert"><%= alert %></p>
+<% end %>
 
 <div class="form-card">
   <%= render "form", book: @book %>
