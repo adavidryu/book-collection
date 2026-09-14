@@ -1,4 +1,13 @@
 <div id="<%= dom_id book %>">
   <p class="book-label">Title</p>
-  <p class="book-title"><%= book.title %></p>
+  <p class="book-detail book-title"><%= book.title %></p>
+
+  <p class="book-label">Author</p>
+  <p class="book-detail"><%= book.author %></p>
+
+  <p class="book-label">Price</p>
+  <p class="book-detail"><%= number_to_currency(book.price) if book.price.present? %></p>
+
+  <p class="book-label">Published date</p>
+  <p class="book-detail"><%= book.published_date %></p>
 </div>

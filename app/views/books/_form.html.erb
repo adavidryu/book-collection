@@ -16,6 +16,23 @@
     <%= form.text_field :title %>
   </div>
 
+  <div class="form-field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :price %>
+    <%= form.number_field :price, step: 0.01 %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :published_date, "Published date" %>
+    <div class="date-selects">
+      <%= form.date_select :published_date, start_year: 1900, end_year: Date.current.year %>
+    </div>
+  </div>
+
   <div class="form-actions">
     <%= form.submit class: "button primary-button" %>
   </div>
