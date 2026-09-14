@@ -107,6 +107,32 @@ a {
   color: #a33a3a;
 }
 
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.book-actions form {
+  margin: 0;
+}
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.book-actions form {
+  margin: 0;
+}
+
 .button {
   display: inline-block;
   box-sizing: border-box;
@@ -142,7 +168,8 @@ a {
 
 .form-field input[type="text"],
 .form-field input[type="number"],
-.date-selects select {
+.date-selects select,
+.form-field select {
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid #b9c0ca;
@@ -158,6 +185,16 @@ a {
 .date-selects {
   display: flex;
   gap: 8px;
+}
+
+.form-field > select {
+  width: 100%;
+}
+
+.navigation-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .form-field + .form-field {

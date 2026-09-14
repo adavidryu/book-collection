@@ -1,0 +1,27 @@
+<%= form_with(model: user_book) do |form| %>
+  <% if user_book.errors.any? %>
+    <div class="form-errors">
+      <h2><%= pluralize(user_book.errors.count, "error") %> prohibited this user book from being saved:</h2>
+
+      <ul>
+        <% user_book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-field">
+    <%= form.label :user_id, "User" %>
+    <%= form.select :user_id, User.order(:username).map { |user| [user.username, user.id] }, { include_blank: true }, { id: "id_of_the_user_id_select_box" } %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :book_id, "Book" %>
+    <%= form.select :book_id, Book.order(:title).map { |book| [book.title, book.id] }, { include_blank: true }, { id: "id_of_the_book_id_select_box" } %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit class: "button primary-button" %>
+  </div>
+<% end %>

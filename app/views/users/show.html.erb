@@ -1,0 +1,16 @@
+<% content_for :title, "User Details" %>
+
+<h1>User Details</h1>
+
+<% if notice.present? %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<div class="detail-card">
+  <%= render @user %>
+</div>
+
+<div class="page-links">
+  <%= link_to "Edit this User", edit_user_path(@user) %> |
+  <%= link_to "Back to Users", users_path %>
+</div>

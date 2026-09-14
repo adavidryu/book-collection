@@ -1,0 +1,31 @@
+<% content_for :title, "User Books" %>
+
+<div class="page-header">
+  <div>
+    <h1>User Books</h1>
+    <p class="subtitle">Books assigned to users.</p>
+  </div>
+  <%= link_to "New User Book", new_user_book_path, class: "button primary-button" %>
+</div>
+
+<% if notice.present? %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<div class="page-links navigation-links">
+  <%= link_to "Book Index", books_path %>
+  <%= link_to "User Index", users_path %>
+</div>
+
+<div id="user_books">
+  <% @user_books.each do |user_book| %>
+    <article class="book-card">
+      <%= render user_book %>
+      <div class="book-actions">
+        <%= link_to "Show", user_book_path(user_book) %>
+        <%= link_to "Edit", edit_user_book_path(user_book) %>
+        <%= button_to "Delete", user_book_path(user_book), method: :delete, class: "link-button danger-link" %>
+      </div>
+    </article>
+  <% end %>
+</div>

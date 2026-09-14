@@ -1,0 +1,16 @@
+<% content_for :title, "User Book Details" %>
+
+<h1>User Book Details</h1>
+
+<% if notice.present? %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<div class="detail-card">
+  <%= render @user_book %>
+</div>
+
+<div class="page-links">
+  <%= link_to "Edit this User Book", edit_user_book_path(@user_book) %> |
+  <%= link_to "Back to User Books", user_books_path %>
+</div>
