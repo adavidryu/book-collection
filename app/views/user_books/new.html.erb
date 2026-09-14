@@ -1,0 +1,12 @@
+<% content_for :title, "New User Book" %>
+
+<h1>New User Book</h1>
+<p class="subtitle">Choose a user and a book.</p>
+
+<div class="form-card">
+  <%= render "form", user_book: @user_book %>
+</div>
+
+<div class="page-links">
+  <%= link_to "Back to User Books", user_books_path %>
+</div>
