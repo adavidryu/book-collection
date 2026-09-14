@@ -1,0 +1,15 @@
+{
+  "name": "Book Collection",
+  "stack": "heroku-24",
+  "addons": [
+    "heroku-postgresql:essential-0"
+  ],
+  "scripts": {
+    "postdeploy": "bin/rails db:prepare"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
